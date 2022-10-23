@@ -1,22 +1,20 @@
 package com.bourne.zinkworksatm.models;
 
-import java.util.List;
+public class ApiResponse<T> {
 
-public class ApiResponse {
+    private T payload;
+    private boolean success;
 
-    Object payload;
-    boolean success;
-
-    public ApiResponse(Object payload, boolean success) {
+    public ApiResponse(T payload, boolean success) {
         this.payload = payload;
         this.success = success;
     }
 
-    public Object getPayload() {
+    public T getPayload() {
         return payload;
     }
 
-    public void setPayload(Object payload) {
+    public void setPayload(T payload) {
         this.payload = payload;
     }
 
